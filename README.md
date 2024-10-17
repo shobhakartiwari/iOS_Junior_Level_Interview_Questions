@@ -11,7 +11,7 @@ Hi, I am Shobhakar Tiwari • I have taught and mentored many developers, and th
 
 You can check my contributions over:
 
-- [StackOverflow](https://twitter.com/amitiitbhu)
+- [StackOverflow](https://stackoverflow.com/users/3400991/shobhakar-tiwari)
 - [LinkedIn](https://www.linkedin.com/in/shobhakar-tiwari/)
 - [GitHub](https://github.com/shobhakartiwari)
 
