@@ -65,3 +65,9 @@ You can check my contributions over:
 - **Question**: What is lazy property ?
 - **Question**: What is the difference between MVC vs MVVM?
 - **Question**: Could you tell me about the Swiftui @State, @ObservableObject, @Published?
+- **Question**: Could you tell me what is the difference between frame vs bounds ?
+- **Question**: What is Size classes ? and why it is used for !
+- **Question**: What is Content Compression?
+- **Question**: What is Atomic and NonAtomic property ?
+- **Question**: What is Environment Object ?
+- **Question**: What is Singleton and disucs benefits and drawbacks ?
