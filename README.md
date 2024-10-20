@@ -3,9 +3,9 @@
 
 > iOS Interview Questions - Your Cheat Sheet For iOS Interview
 
-### Prepared & maintained by [Shobhakar Tiwari](https://github.com/shobhakartiwari) - Senior iOS Lead Engineer • [DM for iOS Mock interview](https://www.linkedin.com/in/shobhakar-tiwari/) • Building for Apple Platforms!
+### Prepared & maintained by [Shobhakar Tiwari](https://github.com/shobhakartiwari) - Senior iOS Lead Engineer • Building for Apple Platforms!
 
-## About me
+## About me:  [DM for iOS Mock interview](https://www.linkedin.com/in/shobhakar-tiwari/)
 
 Hi, I am Shobhakar Tiwari • I have taught and mentored many developers, and their efforts landed them high-paying tech jobs in United States, helped many tech companies in solving their unique problems, and created many framework for airline, e-Commerce based companies. I am passionate coding and always try to contribute to the developer community.
 
