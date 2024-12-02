@@ -347,3 +347,6 @@ DispatchQueue.global(qos: .userInteractive).async {
 - Default – The standard priority for tasks without a specified priority.
 - Utility – Long-running tasks that do not need immediate attention.
 - Background – Low-priority tasks that run behind the scenes (lowest priority).
+
+### 51. Why Weak is slower than Strong ?
+- refer to my medium article for this : https://medium.com/@shobhakartiwari/why-weak-is-slower-than-strong-e6c805784ed8
