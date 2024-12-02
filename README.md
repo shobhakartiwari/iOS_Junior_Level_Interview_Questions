@@ -350,3 +350,6 @@ DispatchQueue.global(qos: .userInteractive).async {
 
 ### 51. Why Weak is slower than Strong ?
 - refer to my medium article for this : https://medium.com/@shobhakartiwari/why-weak-is-slower-than-strong-e6c805784ed8
+
+### 52. What is the difference between “immutable” and “mutable” objects in Swift?
+- refer to my medium article for this : https://medium.com/@shobhakartiwari/immutable-vs-mutable-objects-in-swift-an-ios-developers-perspective-fae2763be87f
