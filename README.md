@@ -353,3 +353,155 @@ DispatchQueue.global(qos: .userInteractive).async {
 
 ### 52. What is the difference between “immutable” and “mutable” objects in Swift?
 - refer to my medium article for this : https://medium.com/@shobhakartiwari/immutable-vs-mutable-objects-in-swift-an-ios-developers-perspective-fae2763be87f
+
+# Swift Testing Interview Questions and Answers
+
+### **53: What is unit testing, and why is it important?**
+**A:** Unit testing is a software testing method where individual components or functions are tested in isolation. It ensures code correctness, simplifies debugging, and enhances code quality.
+
+### **:54 How do you set up a unit test target in Xcode?**
+**A:** 
+1. Open your Xcode project.
+2. Select **File > New > Target**.
+3. Choose **Unit Testing Bundle**.
+4. Name the target and click **Finish**.
+
+### **55: What is XCTest?**
+**A:** XCTest is Apple's testing framework used for writing unit tests and UI tests for iOS, macOS, watchOS, and tvOS applications.
+
+### **56: How do you create a test case class using XCTest?**
+```swift
+import XCTest
+
+class MyTests: XCTestCase {
+    func testExample() {
+        let result = 2 + 2
+        XCTAssertEqual(result, 4, "The result should be 4")
+    }
+}
+```
+
+### **56: Explain the lifecycle of a test method in XCTest.**
+**A:** XCTest provides the following lifecycle methods:
+- `setUp()`: Called before each test method.
+- `tearDown()`: Called after each test method.
+- `setUpWithError()` & `tearDownWithError()`: Handle throwing errors if needed.
+
+### **57: What are assertions in unit testing? Provide examples.**
+**A:** Assertions check test expectations. Common assertions:
+```swift
+XCTAssert(true)                // General assertion
+XCTAssertEqual(2 + 2, 4)      // Equality check
+XCTAssertNotEqual(2 + 2, 5)   // Inequality check
+XCTAssertNil(nil)             // Nil check
+XCTAssertNotNil("Hello")     // Non-nil check
+```
+
+### **58: How do you write asynchronous test cases using XCTest?**
+```swift
+func testAsyncCall() {
+    let expectation = self.expectation(description: "Async Call")
+    
+    fetchData { data in
+        XCTAssertNotNil(data)
+        expectation.fulfill()
+    }
+
+    waitForExpectations(timeout: 5, handler: nil)
+}
+```
+
+### **59: What are test doubles? Explain mocks, stubs, and fakes.**
+**A:**
+- **Mocks:** Objects that verify interactions.
+- **Stubs:** Provide predefined responses.
+- **Fakes:** Provide working implementations, usually for testing only.
+
+### **60: How would you mock a network call in a unit test?**
+```swift
+class MockNetworkService: NetworkService {
+    func fetchData(completion: @escaping (Data?) -> Void) {
+        let mockData = Data([0x0, 0x1, 0x2])
+        completion(mockData)
+    }
+}
+```
+
+### **61: What is TDD, and what are its benefits?**
+**A:** TDD involves writing tests before writing the actual implementation code. Benefits include:
+- Reduces bugs.
+- Improves design.
+- Provides better test coverage.
+
+### **62: How would you follow TDD in Swift?**
+1. Write a failing test.
+2. Implement the code to pass the test.
+3. Refactor the code.
+
+Example:
+```swift
+class CalculatorTests: XCTestCase {
+    func testAddition() {
+        let result = Calculator.add(2, 3)
+        XCTAssertEqual(result, 5)
+    }
+}
+
+struct Calculator {
+    static func add(_ a: Int, _ b: Int) -> Int {
+        return a + b
+    }
+}
+```
+
+---
+
+### **63: What is code coverage, and how do you enable it in Xcode?**
+**A:** Code coverage measures how much of the source code is tested by unit tests.
+
+To enable it:
+1. Open Xcode.
+2. Go to **Product > Scheme > Edit Scheme...**
+3. Select **Test** and check **Gather Coverage for Targets**.
+
+### **64: How do you interpret code coverage reports?**
+**A:** Xcode's code coverage tool highlights lines of code that are tested. Green means fully tested, while red indicates untested code.
+
+### **64: What are best practices for writing unit tests?**
+- Write independent tests.
+- Use meaningful test method names.
+- Test one thing per method.
+- Use test doubles when needed.
+- Keep tests readable and maintainable.
+
+### **65: How can you prevent unreliable tests from occurring?**
+- Avoid external dependencies.
+- Use mock services.
+- Ensure consistent test data.
+
+### **66: How do you test Core Data models in unit tests?**
+```swift
+func testCoreDataModel() {
+    let context = PersistenceController.shared.container.viewContext
+    let entity = MyEntity(context: context)
+    entity.name = "Test"
+
+    do {
+        try context.save()
+        XCTAssertNotNil(entity)
+    } catch {
+        XCTFail("Saving failed")
+    }
+}
+```
+
+### **67: How do you test view models in MVVM architecture?**
+```swift
+class ViewModelTests: XCTestCase {
+    func testViewModelFetch() {
+        let viewModel = MyViewModel(service: MockService())
+        viewModel.fetchData()
+        XCTAssertEqual(viewModel.data.count, 3)
+    }
+}
+```
