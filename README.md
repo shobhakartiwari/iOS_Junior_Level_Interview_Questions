@@ -505,3 +505,13 @@ class ViewModelTests: XCTestCase {
     }
 }
 ```
+### **68. When you should use strong, weak and unowned?**
+- When working with reference types in Swift, managing memory is crucial to avoid retain cycles. Here's a quick guide to determine when to use 𝗌𝗍𝗋𝗈𝗇𝗀, 𝗐𝖾𝖺𝗄, or 𝗎𝗇𝗈𝗐𝗇𝖾𝖽 references:
+
+👉 𝗦𝘁𝗿𝗼𝗻𝗴 – Best for hierarchical relationships (e.g., parent owns child).
+👉 𝗪𝗲𝗮𝗸 – Use when instances are optionally related to each other.
+👉 𝗨𝗻𝗼𝘄𝗻𝗲𝗱 – Use when one instance cannot exist without the other (mandatory dependency).
+<img width="493" alt="Screenshot 2024-12-23 at 12 21 59 AM" src="https://github.com/user-attachments/assets/fa64c6b8-dc9a-486e-8444-1b3622fd27cb" />
+
+
+
