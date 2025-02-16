@@ -504,4 +504,5 @@ class ViewModelTests: XCTestCase {
 <img width="493" alt="Screenshot 2024-12-23 at 12 21 59 AM" src="https://github.com/user-attachments/assets/fa64c6b8-dc9a-486e-8444-1b3622fd27cb" />
 
 
-
+### **69. Why stored property not allowed within Enum ?
+- Follow this link for answer : https://medium.com/@shobhakartiwari/why-are-stored-properties-not-allowed-in-enums-in-swift-31c27f0210ca
